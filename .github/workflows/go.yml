@@ -62,3 +62,7 @@ jobs:
     
     - name: Create-DB
       run: docker-compose up -d
+  
+  docker:
+    needs: build
+    uses: ./.github/workflows/Docker.yml
